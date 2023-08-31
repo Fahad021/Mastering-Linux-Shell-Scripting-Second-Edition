@@ -3,10 +3,6 @@ import sys
 count = len(sys.argv)
 name = ''
 
-if ( count == 1 ):
-    name = input("Enter a name: ") 
-else:
-    name = sys.argv[1]
-
-print("Hello " + name)
-print("Exiting " + sys.argv[0])
+name = input("Enter a name: ") if ( count == 1 ) else sys.argv[1]
+print(f"Hello {name}")
+print(f"Exiting {sys.argv[0]}")
